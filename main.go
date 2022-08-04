@@ -27,7 +27,7 @@ import (
 createReader == NewReader
 */
 // Заполняем хранилище накладными
-func addBill() repoBillLading.BillLadingStorage {
+func addBill() *repoBillLading.BillLadingStorage {
 	r := repoBillLading.NewCustomerStorage()
 	var id uint = 1
 	resume := "N"
@@ -55,7 +55,7 @@ func addBill() repoBillLading.BillLadingStorage {
 			log.Fatal("Недопустимый символ")
 		}
 	}
-	return r
+	return &r
 }
 
 // Запрашиваем вывод накладных.
@@ -102,5 +102,5 @@ func show(r *repoBillLading.BillLadingStorage) {
 
 func main() {
 	repo := addBill()
-	show(&repo)
+	show(repo)
 }

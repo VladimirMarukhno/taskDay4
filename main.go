@@ -75,7 +75,7 @@ func show(r *repoBillLading.BillLadingStorage) {
 			break
 		} else if input == "Y" {
 			for _, c := range *r {
-				fmt.Printf("id: %v\nФИО:%v %v %v\nТелефонный номер: %v\nАдресс доставки: %v, %v, %v, %v, %v\nid товара: %v\nНаименование товара: %v\n",
+				fmt.Printf("\nid: %v\nФИО:%v %v %v\nТелефонный номер: %v\nАдресс доставки: %v, %v, %v, %v, %v\nid товара: %v\nНаименование товара: %v\n\n",
 					c.Id, c.Customer.FirstName, c.Customer.LastName, c.Customer.Patronymic, c.Customer.TelephoneNumber,
 					c.Address.PostalCode, c.Address.State, c.Address.City, c.Address.Street, c.Address.House,
 					c.Prod.NumberItems, c.Prod.ProductName)
@@ -91,7 +91,7 @@ func show(r *repoBillLading.BillLadingStorage) {
 			if err != nil {
 				log.Println(err)
 			} else {
-				fmt.Printf("id: %v\nФИО:%v %v %v\nТелефонный номер: %v\nАдресс доставки: %v, %v, %v, %v, %v\nid товара: %v\nНаименование товара: %v\n",
+				fmt.Printf("\nid: %v\nФИО:%v %v %v\nТелефонный номер: %v\nАдресс доставки: %v, %v, %v, %v, %v\nid товара: %v\nНаименование товара: %v\n\n",
 					c.Id, c.Customer.FirstName, c.Customer.LastName, c.Customer.Patronymic, c.Customer.TelephoneNumber,
 					c.Address.PostalCode, c.Address.State, c.Address.City, c.Address.Street, c.Address.House,
 					c.Prod.NumberItems, c.Prod.ProductName)
